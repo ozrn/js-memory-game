@@ -1,0 +1,19 @@
+
+*{
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(#577373,#B56225);
+}
+
+.grid {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
