@@ -62,6 +62,8 @@ const cardArray = [{
 ]
 
   const grid = document.querySelector('.grid')
+  let cardsChosen = []
+  let cardsChosenId = []
 
   //create board to put all images into a div
   function createBoard() {
@@ -71,8 +73,19 @@ const cardArray = [{
       card.setAttribute('data-id', i)
       card.setAttribute('width', "135px")
       card.setAttribute('heigth', "150px")
+      card.addEventListener('click', flipCard)
       grid.appendChild(card)
     }
   }
+
+
+  //flip the card when clicked
+    function flipCard() {
+      let cardId = this.getAttribute('data-id')
+      cardsChosen.push(cardArray[cardId].name)
+      cardsChosenId.push(cardId)
+      this.setAttribute('src', cardArray[cardId].img)
+    }
+
 
   createBoard()
